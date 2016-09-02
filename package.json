@@ -25,6 +25,7 @@
   "homepage": "https://github.com/ukmadlz/whereversim-nodejs#readme",
   "dependencies": {
     "assert": "^1.4.1",
+    "cloudant": "^1.4.3",
     "lodash": "^4.15.0",
     "request": "^2.74.0"
   }
