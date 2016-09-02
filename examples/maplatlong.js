@@ -4,16 +4,16 @@ var _ = require('lodash');
 
 var whereversim = require('../lib/Client');
 var whereverSIM = new whereversim({
-  auth_token: 'eyJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6NjYsImVzYy51c2VyIjpudWxsLCJlc2Mub3JnIjoxNDIyLCJpc3MiOiJkZXZAc3BjLWZyb250ZW5kIiwiZXhwIjoxNDcyODMzNDg4LCJpYXQiOjE0NzI4MTkwODh9.D1dBN00O5mnTFSAYEgfAqVf4PN2NhjAQ0Nxoh2hpLGvYi4x9QP3cS6AgeF60K1B6yiZzdrGwVmxdKOPWLi4xYA',
+  application_token: 'borked',
 });
 
 var Cloudant = require('cloudant');
 var cloudant = Cloudant({
-  account: 'elsmore',
-  username: 'ionlyoungeredinsusebroud',
-  password: '72108c2813a8c7001fc6ba1dc7024ea1de6ecfbe',
+  account: 'account',
+  username: 'apiuser',
+  password: 'apipass',
 });
-var mapdb = cloudant.use('whereversim');
+var mapdb = cloudant.use('dbname');
 
 whereverSIM.messages.listSMS({
   endpoint: 8394004
